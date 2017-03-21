@@ -1,0 +1,29 @@
+{
+  "name": "marked-down-previewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "RZ",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.15.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "marked": "^0.3.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}

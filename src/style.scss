@@ -1,0 +1,61 @@
+*::after, *::before {
+    box-sizing: border-box;
+}
+
+@mixin crossBrowser2($prop1, $prop2, $value) {
+    -o-#{$prop1}-#{$prop2}: $value;
+    -webkit-#{$prop1}-#{$prop2}: $value;
+    -khtml-#{$prop1}-#{$prop2}: $value;
+    -moz-#{$prop1}-#{$prop2}: $value;
+    -ms-#{$prop1}-#{$prop2}: $value;
+    #{$prop1}-#{$prop2}: $value;
+}
+@mixin code {  
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #c7254e;
+    font-size: 90%;
+    padding: 2px 4px;
+}
+
+.txt {
+    font-family: Colibri, Arial;
+    font-size: 14px;
+    display: inline-block;
+    width: 47%;
+    float: left;
+    &:nth-child(1) {
+        color: #bababa;
+        margin: 0 2% 0 8%;
+        width: 40%;
+    }
+    &:nth-child(2) {    
+        padding-left: 30px;
+        width: 40%;
+    }
+}
+#txtArea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    @include crossBrowser2(border, radius, 5px);
+    &:focus {
+        border: 1px solid white; //#33adff;
+        @include crossBrowser2(box, shadow, 0 1px 5px 1px #00ff00); //#33adff);
+    }
+}
+code {
+    @include code();  
+}
+
+@media screen and (max-width: 600px) {    
+    .txt:nth-child(1) {
+        width: 85%;
+        float: none;
+    }  
+    .txt:nth-child(2) {
+        width: 85%;
+        float: none;
+    }  
+}
