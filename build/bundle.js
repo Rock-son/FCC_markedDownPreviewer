@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "D:\\Udemy\\_NODE\\firstApp\\public";
+/******/ 	__webpack_require__.p = "D:\\Udemy\\_NODE\\markDownPreviewer\\public";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 189);
@@ -22051,9 +22051,9 @@ var _textArea = __webpack_require__(188);
 
 var _textArea2 = _interopRequireDefault(_textArea);
 
-var _markedDownArea = __webpack_require__(187);
+var _markDownArea = __webpack_require__(187);
 
-var _markedDownArea2 = _interopRequireDefault(_markedDownArea);
+var _markDownArea2 = _interopRequireDefault(_markDownArea);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22063,20 +22063,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MarkedDownApp = function (_React$Component) {
-    _inherits(MarkedDownApp, _React$Component);
+var MarkDownApp = function (_React$Component) {
+    _inherits(MarkDownApp, _React$Component);
 
-    function MarkedDownApp(props) {
-        _classCallCheck(this, MarkedDownApp);
+    function MarkDownApp(props) {
+        _classCallCheck(this, MarkDownApp);
 
-        var _this = _possibleConstructorReturn(this, (MarkedDownApp.__proto__ || Object.getPrototypeOf(MarkedDownApp)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (MarkDownApp.__proto__ || Object.getPrototypeOf(MarkDownApp)).call(this, props));
 
         _this.state = { value: _this.props.value };
         _this.onUpdate = _this.onUpdate.bind(_this);
         return _this;
     }
 
-    _createClass(MarkedDownApp, [{
+    _createClass(MarkDownApp, [{
         key: 'onUpdate',
         value: function onUpdate(event) {
             this.setState({ value: event.target.value });
@@ -22089,7 +22089,7 @@ var MarkedDownApp = function (_React$Component) {
                 null,
                 _react2.default.createElement(_textArea2.default, { className: 'txt', id: 'txtArea', rows: '35', type: 'text', update: this.onUpdate, value: this.state.value }),
                 _react2.default.createElement(
-                    _markedDownArea2.default,
+                    _markDownArea2.default,
                     { className: 'txt' },
                     (0, _marked2.default)(this.state.value, { sanitize: true })
                 )
@@ -22097,10 +22097,10 @@ var MarkedDownApp = function (_React$Component) {
         }
     }]);
 
-    return MarkedDownApp;
+    return MarkDownApp;
 }(_react2.default.Component);
 
-exports.default = MarkedDownApp;
+exports.default = MarkDownApp;
 
 /***/ }),
 /* 183 */
