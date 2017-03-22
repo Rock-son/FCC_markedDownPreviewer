@@ -1,9 +1,9 @@
 import React from 'react';
 import marked from 'marked';
 import TextArea from './textArea';
-import MarkedDownArea from './markedDownArea';
+import MarkDownArea from './markDownArea';
 
-class MarkedDownApp extends React.Component {
+class MarkDownApp extends React.Component {
     constructor(props) {
         super(props);  
         this.state = {value: this.props.value};
@@ -16,10 +16,10 @@ class MarkedDownApp extends React.Component {
         return (
             <div>
               <TextArea className='txt' id='txtArea' rows='35' type="text" update={this.onUpdate} value={this.state.value}/>
-              <MarkedDownArea className='txt'>{marked(this.state.value, {sanitize: true})}</MarkedDownArea>
+              <MarkDownArea className='txt'>{marked(this.state.value, {sanitize: true})}</MarkDownArea>
             </div>
         );
     }    
 }
 
-export default MarkedDownApp;
+export default MarkDownApp;
