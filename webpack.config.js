@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.join(__dirname, 'build');
 var APP_DIR = path.join(__dirname, 'src');
@@ -15,8 +16,7 @@ var config = {
     },
     output: {
         path: BUILD_DIR,
-        filename: '[name].js',
-        publicPath: path.join(__dirname, 'public')
+        filename: '[name].[chunkhash].js'
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -42,7 +42,11 @@ var config = {
     plugins: [
         new ExtractTextPlugin({filename: 'style.css'}),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor'
+            names: ['vendor', 'manifest']
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+            filename: '../index.html'
         })
     ]
 }
